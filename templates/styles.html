@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pigs</title>
+    <link type="text/css" rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Web Tags</h1>
+    </header>
+    <nav>
+        <ul>
+<li>
+    <img src="/static/css/images/r.png"/>&nbsp&nbsp&nbsp&nbsp
+<a href="/webpages">BIRDS</a>&nbsp&nbsp&nbsp&nbsp<a href="/">HOME</a>&nbsp&nbsp&nbsp&nbsp<a href="/styles">PIGS</a>&nbsp&nbsp&nbsp&nbsp
+        <img src="/static/css/images/p.webp"/>
+</li>
+
+        </ul>
+<form method="POST" action="/search">
+    <div class="button-wrapper">
+        <select class="sort-dropdown" name="sort_by">
+            <option value="">Sort all by</option>
+                        <option value="ID">ID</option>
+            <option value="Name">Name</option>
+            <option value="Gender">Gender</option>
+            <option value="Species">Species</option>
+            <option value="Colour">Colour</option>
+            <option value="Ability">Ability</option>
+            <option value="Angry_Birds_Game">Angry Birds Game</option>
+            <option value="Level_Introduction">Level Introduction</option>
+            <option value="Strength">Strength</option>
+            <option value="Size">Size</option>
+        </select>
+        <input type="text" name="search" id="search">
+        <input type="submit" value="Search">
+    </div>
+<div>
+    {% if error_message %}
+    <p class="error">{{ error_message }}</p>
+    {% endif %}
+</div>
+    <div class="button-wrapper">
+        <input type="submit">
+    </div>
+</form>
+    </nav>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <td class="tablehead"><a href="/styles?sort=ID">ID</a></td>
+                    <td class="tablehead"><a href="/styles?sort=Name">Name</a></td>
+                    <td class="tablehead"><a href="/styles?sort=Type">Type</a></td>
+                    <td class="tablehead"><a href="/styles?sort=Gender">Gender</a></td>
+                    <td class="tablehead"><a href="/styles?sort=Species">Species</a></td>
+                    <td class="tablehead"><a href="/styles?sort=Colour">Colour</a></td>
+                    <td class="tablehead"><a href="/styles?sort=Side">Side</a></td>
+                    <td class="tablehead"><a href="/styles?sort=Ability">Ability</a></td>
+                    <td class="tablehead"> <a href="/styles?sort=Angry_Birds_Game">Angry Birds Game</a></td>
+                    <td class="tablehead"><a href="/styles?sort=Level_Introduction">Level Introduction</a></td>
+                    <td class="tablehead"><a href="/styles?sort=Strength">Strength</a></td>
+                    <td class="tablehead"> <a href="/styles?sort=Size">Size</a></td>
+                </tr>
+            </thead>
+            <tbody>
+            {% for tag in tags %}
+                <tr>
+                    <td>{{ tag[0] }}</td>
+                    <td>{{ tag[1] }}</td>
+                <td>{{ tag[2] }}</td>
+                <td>{{ tag[3] }}</td>
+                <td>{{ tag[4] }}</td>
+                <td>{{ tag[5] }}</td>
+                <td>{{ tag[6] }}</td>
+                <td>{{ tag[7] }}</td>
+                <td>{{ tag[8] }}</td>
+<td>{{ tag[9] }}</td>
+                <td>{{ tag[10] }}</td>
+                                <td>{{ tag[11] }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+`<!DOCTYPE html>
+<body2 lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<link type="text/css" rel="stylesheet" href="static/css/style.css">
+</head>
+<>
+<header>
+<h1> Angry Birds</h1>
+</header>
+
+
+
+
+<nav>
+<ul>
+<li>
+    <img src="/static/css/images/r.png"/>&nbsp&nbsp&nbsp&nbsp
+<a href="/webpages">BIRDS</a>&nbsp&nbsp&nbsp&nbsp<a href="/">HOME</a>&nbsp&nbsp&nbsp&nbsp<a href="/styles">PIGS</a>&nbsp&nbsp&nbsp&nbsp
+        <img src="/static/css/images/p.webp"/>
+</li>
+
+
+
+
+
+
+
+</ul>
+<form method="POST" action="/search">
+    <div class="button-wrapper">
+        <select class="sort-dropdown" name="sort_by">
+            <option value="">Sort all by</option>
+                        <option value="ID">ID</option>
+            <option value="Name">Name</option>
+            <option value="Gender">Gender</option>
+            <option value="Species">Species</option>
+            <option value="Colour">Colour</option>
+            <option value="Ability">Ability</option>
+            <option value="Angry_Birds_Game">Angry Birds Game</option>
+            <option value="Level_Introduction">Level Introduction</option>
+            <option value="Strength">Strength</option>
+            <option value="Size">Size</option>
+        </select>
+        <input type="text" name="search" id="search">
+        <input type="submit" value="Search">
+    </div>
+<div>
+    {% if error_message %}
+    <p class="error">{{ error_message }}</p>
+    {% endif %}
+</div>
+    <div class="button-wrapper">
+        <input type="submit">
+    </div>
+</form>
+
+
+
+
+</nav>
+
+
+
+
+<main>
+<h2>Angry Birds</h2>
+<p>This website explains all the Angry Bird characters information and statistics.</p>
+<p>This is a non-profit, informational site that is not affiliated with Rovio Entertainment</p>
+</main>
+
+<bottom>
+<h2>About Us</h2>
+<p>Angry Birds is a popular mobile game developed by Rovio Entertainment. </p>
+<p>The gameplay involves slinging birds into pigs' structures in order to defeat them and retrieve their stolen eggs.</p>
+</bottom>
+
+
+
+
+
+
+
+
+
+
+
+<div id="leftcontent">
+<iframe width="500" height="240" src="https://www.youtube.com/embed/1Bk_nqUQ0fc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+</body>
+</html>
